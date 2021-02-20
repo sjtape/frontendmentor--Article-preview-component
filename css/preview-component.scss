@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+// ## Colors
+
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturateDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+// ## Typography
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+button {
+    border: none;
+    background-color: $LightGrayishBlue;
+    color: $VeryDarkGrayishBlue;
+    border-radius: 50%;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: $DesaturateDarkBlue;
+    color: #fff;
+}
+
+button:active {
+    color: #fff;
+    background-color: $VeryDarkGrayishBlue;
+}
+
+// ## Layout
+.wrapper {
+    font-family: Manrope, sans-serif;
+    min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.preview-component {
+    background-color: $LightGrayishBlue;
+    min-height: 100vh;
+    flex-flow: column nowrap;
+}
+
+.component {
+    width: 90%;
+    background-color: #fff;
+    border-radius: 1rem;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.component-image {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.component-caption {
+    padding: 1.5em;
+
+    h2 {
+        margin: 1rem 0;
+        color: $VeryDarkGrayishBlue;
+    }
+
+    p {
+        color: $DesaturateDarkBlue;
+        line-height: 1.5em;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
+
+.avatar {
+    padding: 1.5em;
+    justify-content: space-between;
+
+    figure {
+        flex-basis: 70%;
+        justify-content: flex-start;
+
+        img {
+            border-radius: 50%;
+            display: inline-block;
+            width: 50px;
+            margin-right: 1em;
+        }
+
+        cite {
+            display: block;
+            font-weight: 700;
+        }
+
+        time {
+            color: $GrayishBlue;
+        }
+    }
+}
+
+.toggle-share {
+    background-color: $VeryDarkGrayishBlue;
+    justify-content: start;
+    padding: 1.5em;
+    border-radius: 0 0 1rem 1rem;
+
+    h3 {
+        color: $GrayishBlue;
+        letter-spacing: 0.3em;
+        margin-right: 1em;
+    }
+
+    .links {
+        justify-content: flex-start;
+
+        li {
+            font-size: 2rem;
+            margin-right: 0.5em;
+        }
+
+        a {
+            color: #fff;
+        }
+
+    }
+
+    button {
+        margin-left: auto;
+        color: #fff;
+        background-color: $DesaturateDarkBlue;
+    }
+
+    button:hover {
+        background-color: $GrayishBlue;
+        color: #fff;
+    }
+
+    button:active {
+        background-color: $LightGrayishBlue;
+        color: $VeryDarkGrayishBlue;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 756px) {
+    .component {
+        max-width: 60rem;
+        flex-direction: row;
+        align-items: stretch;
+        position: relative;
+
+        img {
+            border-radius: 1rem 0 0 1rem;
+            width: 40%;
+        }
+    }
+
+    .component-caption {
+        padding: 1em 2em;
+    }
+
+    .toggle-share {
+        position: absolute;
+        border-radius: 1rem;
+        padding: 1em 2em;
+        top: 50%;
+        right: 0;
+        translate: 33% -50%;
+
+        button {
+            display: none;
+        }
+    }
+
+    .toggle-share::after {
+        content: "";
+        display: inline-block;
+        background-color: $VeryDarkGrayishBlue;
+        width: 2rem;
+        height: 2rem;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        translate: -50% -50%;
+    }
+}
+
+
+.btn-active {
+    color: #fff;
+    background-color: $VeryDarkGrayishBlue;
+}
+
+.toggler-hide {
+    display: none;
+}

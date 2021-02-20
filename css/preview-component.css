@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  border: none;
+  background-color: #ecf2f8;
+  color: #48556a;
+  border-radius: 50%;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6d7f97;
+  color: #fff;
+}
+
+button:active {
+  color: #fff;
+  background-color: #48556a;
+}
+
+.wrapper {
+  font-family: Manrope, sans-serif;
+  min-width: 375px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.preview-component {
+  background-color: #ecf2f8;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.component {
+  width: 90%;
+  background-color: #fff;
+  border-radius: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.component-image {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.component-caption {
+  padding: 1.5em;
+}
+
+.component-caption h2 {
+  margin: 1rem 0;
+  color: #48556a;
+}
+
+.component-caption p {
+  color: #6d7f97;
+  line-height: 1.5em;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.avatar {
+  padding: 1.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.avatar figure {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.avatar figure img {
+  border-radius: 50%;
+  display: inline-block;
+  width: 50px;
+  margin-right: 1em;
+}
+
+.avatar figure cite {
+  display: block;
+  font-weight: 700;
+}
+
+.avatar figure time {
+  color: #9eafc2;
+}
+
+.toggle-share {
+  background-color: #48556a;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 1.5em;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.toggle-share h3 {
+  color: #9eafc2;
+  letter-spacing: 0.3em;
+  margin-right: 1em;
+}
+
+.toggle-share .links {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.toggle-share .links li {
+  font-size: 2rem;
+  margin-right: 0.5em;
+}
+
+.toggle-share .links a {
+  color: #fff;
+}
+
+.toggle-share button {
+  margin-left: auto;
+  color: #fff;
+  background-color: #6d7f97;
+}
+
+.toggle-share button:hover {
+  background-color: #9eafc2;
+  color: #fff;
+}
+
+.toggle-share button:active {
+  background-color: #ecf2f8;
+  color: #48556a;
+}
+
+@media only screen and (min-width: 756px) {
+  .component {
+    max-width: 60rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    position: relative;
+  }
+  .component img {
+    border-radius: 1rem 0 0 1rem;
+    width: 40%;
+  }
+  .component-caption {
+    padding: 1em 2em;
+  }
+  .toggle-share {
+    position: absolute;
+    border-radius: 1rem;
+    padding: 1em 2em;
+    top: 50%;
+    right: 0;
+    translate: 33% -50%;
+  }
+  .toggle-share button {
+    display: none;
+  }
+  .toggle-share::after {
+    content: "";
+    display: inline-block;
+    background-color: #48556a;
+    width: 2rem;
+    height: 2rem;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    translate: -50% -50%;
+  }
+}
+
+.btn-active {
+  color: #fff;
+  background-color: #48556a;
+}
+
+.toggler-hide {
+  display: none;
+}
+/*# sourceMappingURL=preview-component.css.map */
